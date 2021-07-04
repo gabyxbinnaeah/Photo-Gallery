@@ -27,6 +27,10 @@ class Category(models.Model):
     def save_category(self):
         self.save()  
 
+    def delete_category(self):
+        Category.objects.filter(id=self.id).delete()
+
+
 class Image(models.Model):
     name=models.CharField(max_length=30)
     description=models.TextField()

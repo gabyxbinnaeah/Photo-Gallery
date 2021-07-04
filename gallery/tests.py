@@ -41,3 +41,9 @@ class CategoryTestClass(TestCase):
         self.large.save_category()
         searched_category = Category.objects.all()
         self.assertTrue(len(searched_category  ) >0) 
+
+    def test_delete_category(self):
+        self.large.save_category()
+        self.large.delete_category()
+        found_category=Category.objects.all()
+        self.assertTrue(len(found_category)==0)

@@ -9,6 +9,15 @@ class Location(models.Model):
     def save_location(self):
         self.save() 
 
+    def delete_location(self):
+        Location.objects.filter(id=self.id).delete()
+
+    def update_location(self):
+        self.objects.filter(id = self.id).update()  
+
+
+    
+
 class Category(models.Model):
     name=models.CharField(max_length=30)
 

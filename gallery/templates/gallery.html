@@ -2,5 +2,39 @@
 {%block content%}
  {{ block.super}}
 <div class="text-center text-primary yeS"><h2>Welcome to Gallery</h2> </div>
+<!--starts here-->
+<div class="container">
+
+    <!-- Looping through news   -->
+    {% for photos_item in photo_contents %}
+    <!-- id="displayback" -->
+    <div class="row" style="padding-top:20px; padding-bottom:20px;">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="card row" style="background-color: #1d3557;color:white;border-radius:25px 0px 25px;border:2px solid #d62828;">
+          <div class="col-md-6">
+            <div class="card-body"> <h2 class="text-center"> {{ photos_item.name }} </h2></div>
+            <div class="card-body"> <h2 class="text-center"> {{ photos_item.description }} </h2></div>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="card-body"><img src="{{photos_item.image.url}}" class="img-responsive" alt="Image"></div>
+        
+          </div>
+          
+        </div> 
+      </div>
+      <div class="col-md-2"> </div>
+      
+    </div>
+  
+    {% empty %}
+       <div class="row">
+       <h2 class="text-center">No image Uploaded</h2>
+       </div>
+    {% endfor %}
+  
+ </div>
+<!--ends here-->
 
 {%endblock%}

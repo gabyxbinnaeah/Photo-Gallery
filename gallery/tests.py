@@ -53,11 +53,17 @@ class CategoryTestClass(TestCase):
 class ImageTestClass(TestCase):
     def setUp(self):
         self.tech= Image (name='tech',description='network topology')
-        self.tech.save_images() 
+         
     def test_instance(self):
         self.assertTrue(isinstance(self.tech, Image))
 
     def test_save_image(self):
         self.tech.save_images()
         searched_image = Image.objects.all()
-        self.assertTrue(len(searched_image) >0)    
+        self.assertTrue(len(searched_image) >0) 
+
+    def test_delete_image(self):
+        self.tech.save_images()
+        self.tech.delete_image()
+        found_after_delete=Image.objects.all()
+        self.assertTrue(len(found_after_delete)==0)   

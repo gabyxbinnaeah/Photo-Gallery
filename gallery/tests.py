@@ -8,7 +8,7 @@ class LocationTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.bondo, Location))
 
-    def test_save_method(self):
+    def test_save_location(self):
         self.bondo.save_location()
         searched_locations = Location.objects.all()
         self.assertTrue(len(searched_locations ) >0) 
@@ -32,8 +32,12 @@ class LocationTestClass(TestCase):
 
 class CategoryTestClass(TestCase):
     def setUp(self):
-        self.large = Location(name = 'large')
+        self.large = Category(name = 'large')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.large, Category))  
 
+    def test_save_category(self):
+        self.large.save_category()
+        searched_category = Category.objects.all()
+        self.assertTrue(len(searched_category  ) >0) 

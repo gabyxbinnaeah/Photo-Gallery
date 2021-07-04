@@ -41,3 +41,10 @@ class Image(models.Model):
     def __str__(self):
         return self.name
 
+    def save_images(self):
+        self.save()
+
+
+    
+
+

@@ -1,6 +1,8 @@
 from django.test import TestCase
 from .models import Location,Category,Image
 # Create your tests here.
+
+
 class LocationTestClass(TestCase):
     def setUp(self):
         self.bondo = Location(name = 'bondo')
@@ -47,3 +49,15 @@ class CategoryTestClass(TestCase):
         self.large.delete_category()
         found_category=Category.objects.all()
         self.assertTrue(len(found_category)==0)
+
+class ImageTestClass(TestCase):
+    def setUp(self):
+        self.tech= Image (name='tech',description='network topology')
+        self.tech.save_images() 
+    def test_instance(self):
+        self.assertTrue(isinstance(self.tech, Image))
+
+    def test_save_image(self):
+        self.tech.save_images()
+        searched_image = Image.objects.all()
+        self.assertTrue(len(searched_image) >0)    

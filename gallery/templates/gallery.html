@@ -45,13 +45,15 @@
 
           <div class="modal-footer">
             <input style="color:black" class="form-control input-md" type="text"  value="{{photos_itemimage.url}}" id="{{photos_item.id}}.url">
-            <button type="button" class="btn btn-secondary btn-lg" onclick="copyFunction( '{{photos_item.id}}.url')">Copy</button> 
+            <button type="button" class="btn btn-secondary btn-lg"  onclick="Copy( '{{photos_item.id}}.url');">Copy</button> 
             <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
 
             {%block script%}
               <script>
-                      copyFunction = (element) => {
-                      document.getElementById(element).select();
+                      Copy = (element) => {
+                      var Url=document.getElementById(element).select();
+                      Url.innerHTML = window.location.href;
+                      Url.select();
                       document.execCommand("copy");
                       }  
               </script> 

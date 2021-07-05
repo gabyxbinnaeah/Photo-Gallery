@@ -1,5 +1,6 @@
 # Title 
 ### Photo Gallery Web Application
+### home page
 ![](/media/images/home.png)
 ___
 
@@ -14,15 +15,22 @@ ___
 
 # Behavior Driven Development
 
-### A user can view uploaded pictures.
+### A user can view uploaded pictures
 ### A user can click on each image to see more information.
+![](/media/images/pop.png)
+![](/media/images/pop2.png)
+### A user can search pics depending on categories
+![](/media/images/search.png)
 ### A user can  close the poping tab that contains more information.
 ### Admin can sign to access the admin dashboard.
 
 ### Admin can upload images to main page.
 ### Admin can create various categories.
+![](/media/images/category.png)
 ### Admin can create various locations.
+![](/media/images/location.png)
 ### Admin can upadate posted images.
+![](/media/images/image.png)
 ### Admin can delete posted images.
 
 ___

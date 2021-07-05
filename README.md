@@ -1,7 +1,7 @@
 # Title 
 ### Photo Gallery Web Application
 ### home page
-![](/media/images/home.png)
+![](/media/images/home1.png)
 ___
 
 # Author 
@@ -16,11 +16,14 @@ ___
 # Behavior Driven Development
 
 ### A user can view uploaded pictures
+![](/media/images/gallery1.png)
 ### A user can click on each image to see more information.
 ![](/media/images/pop.png)
 ![](/media/images/pop2.png)
 ### A user can search pics depending on categories
 ![](/media/images/search.png)
+### A user can search pics depending on location
+![](/media/images/locationsearch.png)
 ### A user can  close the poping tab that contains more information.
 ### Admin can sign to access the admin dashboard.
 

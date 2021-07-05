@@ -49,6 +49,14 @@ class CategoryTestClass(TestCase):
         found_category=Category.objects.all()
         self.assertTrue(len(found_category)==0)
 
+    def test_update_category(self):
+        self.large.save_category()
+        self.large.update_category(self.large.id,'small')
+        returned_category_list=Category.objects.all()
+        self.assertTrue(len(returned_category_list)==1)
+        updated_category_object=Category.objects.all().first()
+        self.assertTrue(updated_category_object.name=='small')
+
 class ImageTestClass(TestCase):
     def setUp(self):
         self.tech= Image (name='tech',description='network topology')

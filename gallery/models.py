@@ -29,6 +29,10 @@ class Category(models.Model):
 
     def delete_category(self):
         Category.objects.filter(id=self.id).delete()
+    @classmethod
+    def update_category(cls,id,new):
+        return cls.objects.filter(id=id).update(new=new)
+
 
 
 class Image(models.Model):

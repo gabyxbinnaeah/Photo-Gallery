@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  
 </head>
 <body>
     <div class="container">
         <div class="homePage" style=" background-image: url('https://images.unsplash.com/photo-1565799515768-2dcfd834625c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1392&q=80');height:300px;width:100%;background-size: cover;background-repeat: no-repeat;background-position:center center;">
             <div class="text-center yeS"><h2 style="color:white;padding-top:170px">Welcome to Gallery</h2> </div> 
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <form class="" role="search" action="{% url 'search_result' %}">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search image by location" name="location">
+                          <div class="input-group-btn">
+                            <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                          </div>
+                        </div>
+          
+                    </form> 
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <form class="" role="search" action="{% url 'search_results' %}">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search image by category" name="category">
+                          <div class="input-group-btn">
+                            <button class="btn btn-warning" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                          </div>
+                        </div>
+                    </form> 
+                </div>
+                <div class="col-md-2"></div>
+            </div>
         </div>
     </div>
     

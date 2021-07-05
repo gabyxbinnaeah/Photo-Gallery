@@ -58,7 +58,7 @@ ___
 
 # Live link
 
-### click on this link to access application:https://gabyblogapplication.herokuapp.com/
+### click on this link to access application:
 
 ___
 

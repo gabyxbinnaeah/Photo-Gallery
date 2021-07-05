@@ -22,13 +22,12 @@ class LocationTestClass(TestCase):
         self.assertTrue(len(found_location)==0) 
 
     def test_update_location(self):
-        self.bondo=Location(name='Nyeri')
         self.bondo.save_location()
-        self.bondo=Location(name='bondo')
-        self.bondo.save_location()
-        self.bondo.update_location(name='bondo')
-        search_location=Location.object.filter(name='bondo')
-        self.assertTrue(len(search_location)==1)
+        self.bondo.update_location(self.bondo.id,'Nairobi')
+        location_list=Location.objects.all()
+        self.assertTrue(len(location_list)==1)
+        updated_object=Location.objects.all().first()
+        self.assertTrue(updated_object.name=='Nairobi')
 
 
 

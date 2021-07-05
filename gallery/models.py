@@ -11,9 +11,9 @@ class Location(models.Model):
 
     def delete_location(self):
         Location.objects.filter(id=self.id).delete()
-
-    def update_location(self):
-        self.objects.filter(id = self.id).update()  
+    @classmethod
+    def update_location(cls,id,name):
+        return cls.objects.filter(id=id).update(name=name)
 
 
     
@@ -36,7 +36,7 @@ class Image(models.Model):
     description=models.TextField()
     category=models.ForeignKey(Category,on_delete=models.CASCADE,blank=True,null=True)
     location=models.ForeignKey(Location,on_delete=models.CASCADE,blank=True,null=True)
-    image=models.ImageField(upload_to = 'album/',blank=True,null=True)
+    image=models.ImageField(upload_to ='images/',null=True)
     
 
     def __str__(self):
@@ -55,11 +55,13 @@ class Image(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        searched_image=cls.objects.filter(category=search_term)
-        return searched_image     
+        searched_category=cls.objects.filter(category__name__icontains=search_term)
+        return searched_category   
+
+         
 
 
-
+       
 
 
 

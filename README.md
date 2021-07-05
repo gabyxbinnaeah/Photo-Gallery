@@ -1,6 +1,6 @@
 # Title 
 ### Photo Gallery Web Application
-![](http://media/images/home.png)
+![screenshot](/images/home.png)
 ___
 
 # Author 

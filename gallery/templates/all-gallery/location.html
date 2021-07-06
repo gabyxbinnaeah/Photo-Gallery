@@ -16,7 +16,7 @@
     {% if categories %}
       {% for category in categories %}
         <!--Display searched images  -->
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-6 col-sm-6 card" style="background-color: #1d3557;border:3px solid yellow">
           <div class="card-body">
               <img src="{{category.image.url}}" alt="{{image.name}}" class="card-img" height="250px" width="100%">
           </div>
